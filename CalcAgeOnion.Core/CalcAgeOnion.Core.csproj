@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="1_ApplicationServices\" />
+    <Folder Include="2_DomainServices\" />
+    <Folder Include="3_DomainModel\" />
+  </ItemGroup>
+
+</Project>
