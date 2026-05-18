@@ -4,14 +4,8 @@
     {
         public static int RunPure(int birthYear, bool hasHadBirthday, int currentYear)
         {
-            var age = currentYear - birthYear;
-
-            if (!hasHadBirthday)
-            {
-                age--;
-            }
-
-            return age;
+            var birthdayAdjustment = hasHadBirthday ? 0 : -1;
+            return currentYear - birthYear + birthdayAdjustment;
         }
 
         public static void RunImpure()

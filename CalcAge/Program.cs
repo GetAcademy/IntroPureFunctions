@@ -8,6 +8,6 @@ var birthYear = int.Parse(Console.ReadLine()!);
 Console.Write("Har du hatt bursdag i år? j/n: ");
 var hasHadBirthday = Console.ReadLine()! == "j";
 
-var age = CalcAgeService.RunPure(birthYear, hasHadBirthday);
+var age = CalcAgeService.RunPure(birthYear, hasHadBirthday, DateTime.Now.Year);
 
 Console.WriteLine($"Du er {age} år.");
