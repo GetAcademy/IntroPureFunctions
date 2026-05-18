@@ -2,4 +2,5 @@
   <Project Path="CalcAge/CalcAge.csproj" />
   <Project Path="CalcAgeOnion.Console/CalcAgeOnion.Console.csproj" />
   <Project Path="CalcAgeOnion.Core/CalcAgeOnion.Core.csproj" />
+  <Project Path="Clicker/ClickerApp.csproj" />
 </Solution>
