@@ -77,5 +77,29 @@
                 return new ClickerPure(clicker.Points - 10, clicker.PointsPerClick + 1);
             }
         }
+
+        public static void Run4()
+        {
+            var clicker = new ClickerRecordPure(0, 1);
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine($"Du har {clicker.Points} poeng. Trykk + eller U");
+                var key = Console.ReadKey(true);
+                if (key.Key == ConsoleKey.OemPlus) clicker = Click(clicker);
+                else if (key.Key == ConsoleKey.U && clicker.Points >= 10) clicker = Upgrade(clicker);
+            }
+            ClickerRecordPure Click(ClickerRecordPure clicker)
+            {
+                //return new ClickerPure(clicker.Points + clicker.PointsPerClick, clicker.PointsPerClick);
+                return clicker with { Points = clicker.Points + clicker.PointsPerClick };
+            }
+
+            ClickerRecordPure Upgrade(ClickerRecordPure clicker)
+            {
+                return new ClickerRecordPure(clicker.Points - 10, clicker.PointsPerClick + 1);
+            }
+        }
     }
 }
